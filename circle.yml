@@ -1,0 +1,5 @@
+test:
+  override:
+    - echo 'woah!'
+  post:
+    - echo 'hello world' > $CIRCLE_ARTIFACTS/amann_test.txt
