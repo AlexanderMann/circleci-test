@@ -1,0 +1,18 @@
+version: 2.0
+
+workflows:
+  version: 2
+  a-grand-workflow-name:
+    jobs:
+      - not_named_build
+
+jobs:
+  not_named_build:
+    docker:
+      - image: clojure:latest
+    working_directory: /code/
+    steps:
+      - checkout
+      - run:
+          name: Hello World
+          command: echo hello
